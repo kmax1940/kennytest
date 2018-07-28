@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Testing...</title>
+
+<style>
+#loadering {
+width:352px;
+height:242px;
+background-color:#000000;
+text-align:center;
+}
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+
+
+<div class="container">
+
+<div class="jumbotron">
+<h1>Stream testing...</h1>
+<p>
+Testing H264 WebSockets  video...
+</p>
+
+<p>
+<a href="index.htm"><button type="button" class="btn btn-primary">< Home</button></a>
+</p>
+
+<p>
+<div id="videodraw">
+
+<div id="loadering">
+<img src="preloadimage.gif">
+</div>
+
+</div>
+</p>
+</div> <!--jumbotron-->
+</div> <!-- /container -->
+<script type="text/javascript" src="js/_main.js">;</script>
+<script type="text/javascript" src="js/ifvisible.js"></script>
+<script type="text/javascript">
+function eventFire(el, etype){
+  if (el.fireEvent) {
+    el.fireEvent('on' + etype);
+  } else {
+    var evObj = document.createEvent('Events');
+    evObj.initEvent(etype, true, false);
+    el.dispatchEvent(evObj);
+  }
+}
+setTimeout(function() {wsavc.playStream();},500);
+</script>
+</body>
+</html>
