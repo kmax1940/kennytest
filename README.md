@@ -1,2 +1,2 @@
 # kennytest
-learning git hug
+learning git hub
